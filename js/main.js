@@ -1,5 +1,3 @@
-import {convert} from './utjils'
-
 let h1 = document.createElement('h1');
 let app = document.getElementById('app');
 h1.innerHTML = "JavaScript - The Web Audio API"
@@ -100,3 +98,16 @@ volumeSlider.addEventListener('input', () => {
 });
 
 audioSource.connect(gainNode).connect(audioCtx.destination);
+
+
+const convert = (time) => {
+    let minuts = Math.floor(time / 60 ) 
+    let seconds = Math.floor(time % 60)
+    if(minuts < 10 ){
+        minuts = '0' + String(minuts)
+    } 
+    if(seconds < 10){
+        seconds = '0' + String(seconds);
+    }
+    return minuts + ':' + seconds;
+}
