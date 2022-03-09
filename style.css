@@ -1,0 +1,101 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+  background-size: 6px 6px !important;
+  background-image: linear-gradient(-45deg, rgba(0,0,0,0) 46%, #577399 49%, #577399 51%, rgba(0,0,0,0) 55%);
+}
+#app {
+  font-family: Avenir, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  color: #2c3e50;
+  margin-top: 60px;
+
+  display: flex;
+  flex-direction: column;
+  /* Use latest modern browser to see effects of gap property */
+  gap: 20px;
+
+  max-width: 425px;
+  margin: 0 auto;
+}
+button{
+  background-color: unset;
+  border: unset;
+  outline: none;
+  height: 48px;
+  width: 48px;
+  cursor: pointer;
+}
+.control-card{
+  display: flex;
+  align-items: center;
+  width: 100%;
+  background-color: #fff;
+  border: 1px solid #000;
+  border-radius: 6px;
+  padding: 8px 16px;
+}
+.controls-wrapper{
+  display: flex;
+  flex: 1;
+  gap: 8px;
+  justify-content: center;
+  align-items: center;
+  margin-left: 16px;
+}
+.controls-wrapper > input{
+  flex: 1;
+}
+.controls-wrapper > span{
+  font-size: 14px;
+  font-weight: bold;
+}
+.playing{
+  position: relative;
+}
+.playing::after{
+  content: ' ';
+  position: absolute;
+  transform: translate(-50%,-50%);
+  left: 50%;
+  top: 50%;
+  height: 48px;
+  width: 48px;
+  background-image: url('./public/pause.svg');
+}
+.paused{
+  position: relative;
+}
+.paused::after{
+  content: ' ';
+  position: absolute;
+  transform: translate(-50%,-50%);
+  left: 50%;
+  top: 50%;
+  height: 48px;
+  width: 48px;
+  background-image: url('./public/play.svg');
+}
+#title{
+  font-size: 25px;
+  text-align: center;
+  width: 100%;
+}
+#volume[type="range"]{
+  writing-mode: bt-lr;
+  -webkit-appearance :slider-vertical;
+  width: 8px;
+  height: 70px;
+  padding: 0px 5px;
+}
+@media screen and (max-width:570px) {
+  #app{
+    width: 100%;
+    padding: 0px 10px;
+  }
+}
