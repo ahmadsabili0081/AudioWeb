@@ -20,7 +20,7 @@ body{
   /* Use latest modern browser to see effects of gap property */
   gap: 20px;
 
-  max-width: 425px;
+  max-width: 100%;
   margin: 0 auto;
 }
 button{
@@ -97,5 +97,8 @@ button{
   #app{
     width: 100%;
     padding: 0px 10px;
+  }
+  .control-card{
+    width: 100%;
   }
 }

@@ -1,4 +1,3 @@
-import './style.css'
 import {convert} from './utjils'
 
 let h1 = document.createElement('h1');
